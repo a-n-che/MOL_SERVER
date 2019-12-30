@@ -75,7 +75,7 @@ app.use(route.get('/logout', function(ctx) {
           return next()
         } else {
             //console.log('AUTH!')
-            await send(ctx, '../ui/login.html', {root: "./"})
+            await send(ctx, './spa/ui/login.html', {root: "../"})
         }
       })
 

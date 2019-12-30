@@ -31,7 +31,7 @@ module.exports = app;
 // Logger
     app.use(logger());
 // FavIcon
-    let s = path.join(path.resolve('..'), 'ui/public/favicon.ico');
+    let s = path.join(path.resolve('..'), 'spa/ui/public/favicon.ico');
     app.use(favicon(s));
 // Hamlet
     app.use(helmet());
@@ -42,16 +42,16 @@ module.exports = app;
 // Auth
     require('./auth')(app); // блок авторизации
 // Serve static files
-    s = path.join(path.resolve('..'), 'ui/public');
+    s = path.join(path.resolve('..'), 'spa/ui/public');
     app.use(serve(s));
     // UI ADMIN APPLICATION
-    s = path.join(path.resolve('..'), appConfig.argv.app);
+    s = path.join(path.resolve('..'), 'spa/'+appConfig.argv.app);
     app.use(serve(s));
     // jet_views
-    //s = path.join(path.resolve('..'), 'ui_adm/jet-views');
+    //s = path.join(path.resolve('..'), 'spa/ui_adm/jet-views');
     //app.use(serve(s));
     // Serve static ui modules/framworks
-    s = path.join(path.resolve('..'), 'ui/node_modules');
+    s = path.join(path.resolve('..'), 'spa/ui/node_modules');
     app.use(serve(s));
 
     require('./routes')(app, 'api', 'server/api'); // определяем api-функции для пути api из подкаталога api
