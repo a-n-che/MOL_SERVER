@@ -1,0 +1,42 @@
+{
+  "name": "MOL",
+  "version": "0.0.1",
+  "description": "MovenmentOnline",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm i",
+    "start": "node index.js",
+    "admin": "node index.js --admin=123 --app=ui_app --port=3888 --config=./config.json --no-mongo",
+    "dou": "node index.js --app=ui_dou --config=./config_dou.json"
+  },
+  "keywords": [
+    "koa",
+    "SPA",
+    "webix-jet"
+  ],
+  "author": "DuChan",
+  "license": "MIT",
+  "dependencies": {
+    "bytes": "^2.5.0",
+    "chalk": "^1.1.3",
+    "dateformat": "^3.0.3",
+    "humanize-number": "0.0.2",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
+    "koa-favicon": "^2.0.1",
+    "koa-helmet": "^4.1.0",
+    "koa-passport": "^4.1.1",
+    "koa-route": "^3.2.0",
+    "koa-send": "^5.0.0",
+    "koa-session": "^5.10.1",
+    "koa-static": "^5.0.0",
+    "lodash.setwith": "^4.3.2",
+    "minimist": "^1.2.0",
+    "mongoose": "^5.6.11",
+    "passport-local": "^1.0.0",
+    "passthrough-counter": "^1.0.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
+  }
+}

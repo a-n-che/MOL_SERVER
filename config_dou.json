@@ -1,0 +1,14 @@
+{
+  "application":{
+    "port" : 3080
+  },
+  "auth": {
+    "type": "domino",
+    "db" : "dbcarea"
+	},
+  "mongodb": false,
+  "domino":{
+    "api": "http://127.0.0.1:8000/ma.nsf/api.xsp/",
+    "dbs": ["dbstructure", "dbcarea"]
+  }
+}

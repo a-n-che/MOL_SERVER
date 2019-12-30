@@ -1,0 +1,24 @@
+{
+  "application":{
+    "port" : 3000
+  },
+  "auth": {
+	"type":"mongodb"
+	},
+  "mongodb":{
+    "url" : "mongodb://localhost:27017/MOL",
+    "connectOptions" : {                  
+    	"useCreateIndex" : true,
+    	"useNewUrlParser" : true,
+    	"useUnifiedTopology" : true,
+    	"useFindAndModify" : false
+    },
+    "db"  : "MOL",
+    "cols": ["users"]
+  },
+  "domino":{
+    "url": "http://127.0.0.1:8000/ma.nsf/",
+    "api": "http://127.0.0.1:8000/ma.nsf/api.xsp/",
+    "dbs": ["dbstructure"]
+  }
+}
